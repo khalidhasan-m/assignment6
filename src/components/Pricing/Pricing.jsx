@@ -57,19 +57,19 @@ const pricingData = [
 
 const Pricing = () => {
   return (
-    <div className="bg-base-100 py-20">
-
+    <div className="bg-base-100 py-14 px-4 sm:px-6 lg:px-8">
       {/* Heading */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold">Simple, Transparent Pricing</h1>
-        <p className="text-gray-500 mt-3">
+      <div className="text-center mb-12">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
+          Simple, Transparent Pricing
+        </h1>
+        <p className="text-gray-500 mt-3 text-sm sm:text-base max-w-md mx-auto">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
       </div>
 
       {/* Cards */}
-      <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
         {pricingData.map((item) => {
           const isPro = item.highlight;
 
@@ -79,40 +79,42 @@ const Pricing = () => {
               className={`card shadow-xl p-6 relative rounded-2xl transition duration-300
               ${
                 isPro
-                  ? "bg-linear-to-r from-purple-500 to-indigo-500 text-white scale-105"
+                  ? "bg-linear-to-r from-purple-500 to-indigo-500 text-white lg:scale-105"
                   : "bg-base-100"
               }`}
             >
-
               {/* Badge */}
               {isPro && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="badge bg-yellow-300 text-black px-4 py-1 rounded-full">
+                  <span className="badge bg-yellow-300 text-black px-4 py-1 rounded-full whitespace-nowrap">
                     {item.badge}
                   </span>
                 </div>
               )}
 
               {/* Title */}
-              <h2 className="text-2xl font-bold">{item.name}</h2>
-              <p className={`text-sm ${isPro ? "text-white/80" : "text-gray-500"}`}>
+              <h2 className="text-xl sm:text-2xl font-bold">{item.name}</h2>
+              <p
+                className={`text-sm mt-1 ${isPro ? "text-white/80" : "text-gray-500"}`}
+              >
                 {item.description}
               </p>
 
               {/* Price */}
               <div className="flex items-end gap-1 mt-4 mb-4">
-                <span className="text-4xl font-bold">${item.price}</span>
-                <span className="text-lg">/{item.period}</span>
+                <span className="text-3xl sm:text-4xl font-bold">
+                  ${item.price}
+                </span>
+                <span className="text-base sm:text-lg">/{item.period}</span>
               </div>
 
               {/* Features */}
               <ul className="flex flex-col gap-3 mb-6">
                 {item.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm">
-                    {/* Green check icon */}
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="size-4 text-green-500"
+                      className="size-4 shrink-0 text-green-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -124,9 +126,7 @@ const Pricing = () => {
                         d="M5 13l4 4L19 7"
                       />
                     </svg>
-                    <span className={isPro ? "text-white" : ""}>
-                      {feature}
-                    </span>
+                    <span className={isPro ? "text-white" : ""}>{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -145,7 +145,6 @@ const Pricing = () => {
             </div>
           );
         })}
-
       </div>
     </div>
   );
