@@ -57,10 +57,10 @@ const pricingData = [
 
 const Pricing = () => {
   return (
-    <div className="bg-base-100 py-16 px-4">
+    <div className="bg-base-100 py-20">
 
       {/* Heading */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-16">
         <h1 className="text-5xl font-bold">Simple, Transparent Pricing</h1>
         <p className="text-gray-500 mt-3">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.

@@ -1,25 +1,40 @@
-import React from 'react';
+import React from "react";
 
 const Hero4 = () => {
-    return (
-        <div>
-            <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row-reverse">
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button className="btn btn-primary">Get Started</button>
-            <button className="btn btn-primary">Get Started</button>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem eos blanditiis voluptates. Officia earum tempore optio ipsa consectetur quaerat minus.</p>
+  return (
+    <div>
+      <section className="relative flex min-h-96 items-center justify-center bg-linear-to-r from-indigo-600 to-purple-600 px-6 py-20 text-white">
+        <div className="max-w-3xl text-center">
+          {/* Main Heading */}
+          <h2 className="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
+            Ready To Transform Your Workflow?
+          </h2>
+          {/* Subtext */}
+          <p className="mx-auto mb-10 max-w-xl text-lg opacity-90">
+            Join thousands of professionals who are already using Digitools to
+            work smarter. Start your free trial today.
+          </p>
+          {/* Action Buttons */}
+          <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <button className="btn btn-md border-none bg-white px-8 text-indigo-600 hover:bg-gray-100 rounded-full normal-case font-semibold">
+              Explore Products
+            </button>
+            <button className="btn btn-outline btn-md px-8 text-white hover:bg-white/10 rounded-full border-white/50 normal-case font-semibold">
+              View Pricing
+            </button>
+          </div>
+          {/* Trust Indicators */}
+          <div className="mt-8 flex flex-wrap justify-center gap-2 text-sm font-light opacity-80">
+            <span>14-day free trial</span>
+            <span className="hidden sm:inline">•</span>
+            <span>No credit card required</span>
+            <span className="hidden sm:inline">•</span>
+            <span>Cancel anytime</span>
           </div>
         </div>
-      </div>
-        </div>
-    );
+      </section>
+    </div>
+  );
 };
 
 export default Hero4;

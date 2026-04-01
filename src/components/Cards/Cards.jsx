@@ -217,8 +217,7 @@ const ProductCard = ({ product, inCart, onAddToCart }) => (
   </div>
 );
 
-const Cards = ({cart, setCart, view, setView}) => {
-
+const Cards = ({ cart, setCart, view, setView }) => {
   const handleAddToCart = (product) => {
     if (cart.find((item) => item.id === product.id)) return;
     setCart((prev) => [...prev, product]);
@@ -267,7 +266,7 @@ const Cards = ({cart, setCart, view, setView}) => {
       <ToastContainer />
 
       {/* Header */}
-      <div className="text-center mb-8">
+      <div className="text-center my-10">
         <h1 className="text-5xl font-bold">Premium Digital Tools</h1>
         <p className="py-4 text-gray-500 max-w-md mx-auto">
           Choose from our curated collection of premium digital products
@@ -301,7 +300,11 @@ const Cards = ({cart, setCart, view, setView}) => {
           ))}
         </div>
       ) : (
-        <CartView cart={cart} onRemove={handleRemove} onCheckout={handleCheckout} />
+        <CartView
+          cart={cart}
+          onRemove={handleRemove}
+          onCheckout={handleCheckout}
+        />
       )}
     </div>
   );

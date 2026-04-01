@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-[#101727] text-white">
-      <footer className="container mx-auto p-10">
+      <footer className="container mx-auto p-20">
         <div className="footer sm:footer-horizontal">
           <aside>
             <h2 className="text-4xl font-bold">DigiTools</h2>
@@ -76,7 +76,7 @@ const Footer = () => {
         <div className="my-8">
           <hr />
         </div>
-        <div className="flex justify-between text-white/70">
+        <div className="flex md:flex-col justify-between text-white/70">
           <p>© {new Date().getFullYear()} Digitools - All right reserved</p>
           <div>
             <ul className="flex gap-4">

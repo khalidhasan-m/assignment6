@@ -5,7 +5,7 @@ import img3 from "../../assets/rocket.png";
 
 const Hero3 = () => {
   return (
-    <div className="bg-base-200 py-28">
+    <div className="bg-base-200 py-20">
       <div className="container mx-auto text-center">
         {/* Heading */}
         <div className="">

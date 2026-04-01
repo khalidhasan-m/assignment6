@@ -1,29 +1,29 @@
-import React from "react";
+const StatsBanner = () => {
+  const stats = [
+    { value: "50K+", label: "Active Users" },
+    { value: "200+", label: "Premium Tools" },
+    { value: "4.9", label: "Rating" },
+  ];
 
-const Stats = () => {
   return (
-    <div>
-      <div className="stats stats-vertical lg:stats-horizontal shadow">
-        <div className="stat">
-          <div className="stat-title">Downloads</div>
-          <div className="stat-value">31K</div>
-          <div className="stat-desc">Jan 1st - Feb 1st</div>
-        </div>
-
-        <div className="stat">
-          <div className="stat-title">New Users</div>
-          <div className="stat-value">4,200</div>
-          <div className="stat-desc">↗︎ 400 (22%)</div>
-        </div>
-
-        <div className="stat">
-          <div className="stat-title">New Registers</div>
-          <div className="stat-value">1,200</div>
-          <div className="stat-desc">↘︎ 90 (14%)</div>
-        </div>
+    <div className="p-16 bg-linear-to-r from-violet-700 to-purple-500">
+      <div className="flex flex-col sm:flex-row items-center justify-center divide-y sm:divide-y-0 sm:divide-x divide-white/30">
+        {stats.map((stat, i) => (
+          <div
+            key={i}
+            className="flex flex-col items-center px-8 sm:px-16 py-4 sm:py-0"
+          >
+            <span className="text-4xl sm:text-5xl font-extrabold text-white">
+              {stat.value}
+            </span>
+            <span className="text-sm text-white/70 mt-1 tracking-wide">
+              {stat.label}
+            </span>
+          </div>
+        ))}
       </div>
     </div>
   );
 };
 
-export default Stats;
+export default StatsBanner;
